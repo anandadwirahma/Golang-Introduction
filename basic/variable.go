@@ -1,8 +1,11 @@
-package main
+package basic
+
+// package main
 
 import (
 	"fmt"
 )
+
 // ** Define Variable ** \\
 // 1. Type 1 :
 // var variableName type (define a variable with name "variableName" and "type")
@@ -36,41 +39,12 @@ import (
 // Value : true/false
 // default values : false
 
-func main() {
-	fmt.Println("Test Boolean type : ")
-	valid, available := booleanType()
-	fmt.Println(valid)
-	fmt.Println(available)
-
-	fmt.Println("\nTest Integer type : ")
-	int_value := integerType()
-	fmt.Println(int_value)
-
-	fmt.Println("\nTest String type : ")
-	fmt.Println(stringType())
-
-	fmt.Println("\nTest Change String : ")
-	changeString()
-
-	fmt.Println("\nTest iota enumerate")
-	enumType()
-
-	fmt.Println("\nTest Array Type : ")
-	arrayType()
-
-	fmt.Println("\nTest Array Two Dimension : ")
-	arrayTwoDimension()
-
-	fmt.Println("\nTest Slice : ")
-	sliceType()
-}
-
 // ** Boolean Types ** \\
 
 var isActive bool // global variable
 var enabled, disabled = true, false
 
-func booleanType() (bool, bool) {
+func BooleanType() (bool, bool) {
 	var available bool
 
 	valid := false
@@ -81,7 +55,7 @@ func booleanType() (bool, bool) {
 
 // ** Integer Types ** \\
 
-func integerType() int8 {
+func IntegerType() int8 {
 	var a int8
 	var b int8
 
@@ -97,7 +71,7 @@ func integerType() int8 {
 var frenchHello string
 var emptyString string = ""
 
-func stringType() (string,string,string,string,string) {
+func StringType() (string, string, string, string, string) {
 	no, yes, maybe := "no", "yes", "maybe"
 	japaneseHello := "Ohaiou"
 	frenchHello := `Bonjour`
@@ -105,7 +79,7 @@ func stringType() (string,string,string,string,string) {
 	return no, yes, maybe, japaneseHello, frenchHello
 }
 
-func changeString() {
+func ChangeString() {
 	s := "hello"
 	c := []byte(s)
 	c[0] = 'c'
@@ -115,11 +89,11 @@ func changeString() {
 
 // ** Defined Variable By Group ** \\
 
-func definebyGroup(){
+func DefinebyGroup() {
 
 	const (
-		i = 100
-		pi = 3.14515
+		i      = 100
+		pi     = 3.14515
 		prefix = "Go_"
 	)
 
@@ -133,9 +107,9 @@ func definebyGroup(){
 // ** Iota Enumerate Types ** \\
 // iota is keyword to make enum, it begins with 0, increased by 1
 
-func enumType(){
+func EnumType() {
 
-	const(
+	const (
 		x = iota
 		y = iota
 		z = iota
@@ -149,19 +123,19 @@ func enumType(){
 		e, f, g = iota, iota, iota // values of iota are same in one line.
 	)
 
-	fmt.Println("values of x,y,z,w,v = " , x,y,z,w,v)
-	fmt.Println("values of e,f,g = " , e,f,g)
+	fmt.Println("values of x,y,z,w,v = ", x, y, z, w, v)
+	fmt.Println("values of e,f,g = ", e, f, g)
 
 }
 
-func arrayType(){
+func ArrayType() {
 
 	var arr [10]int
 	arr[0] = 42
 	arr[1] = 13
-	a := [3]int{1,2,3}
-	b := [10]int{1,2,3}
-	c := [...]int{4,5,6}
+	a := [3]int{1, 2, 3}
+	b := [10]int{1, 2, 3}
+	c := [...]int{4, 5, 6}
 
 	fmt.Printf("The first element is %d\n", arr[0])
 	fmt.Printf("The last element is %d\n", arr[9])
@@ -170,19 +144,19 @@ func arrayType(){
 	fmt.Printf("C element is %d\n", c)
 }
 
-func arrayTwoDimension(){
+func ArrayTwoDimension() {
 
-	doublArray := [2][4]int{[4]int{1,2,3,4}, [4]int{5,6,7,8}}
-	easyArray := [2][4]int{{1,2,3,4},{5,6,7,8}}
+	doublArray := [2][4]int{[4]int{1, 2, 3, 4}, [4]int{5, 6, 7, 8}}
+	easyArray := [2][4]int{{1, 2, 3, 4}, {5, 6, 7, 8}}
 
 	fmt.Printf("Array two-Dimesional (hard practice) : %d\n", doublArray)
 	fmt.Printf("Array two-Dimesional (easy practice) : %d\n", easyArray)
 }
 
-func sliceType() {
+func SliceType() {
 
 	var ar = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}
-	var a,b []byte
+	var a, b []byte
 	a = ar[2:3]
 	b = ar[3:5]
 

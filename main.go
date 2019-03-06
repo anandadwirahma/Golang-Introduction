@@ -109,7 +109,7 @@ func main() {
 		v3 = Vertext{}
 		p  = &Vertext{1, 2}
 	)
-	fmt.Println(v1, p, v2, v3, (*p).X)
+	fmt.Println(v1, p, v2, v3)
 
 	// fmt.Println("- Method with pointer receiver : ")
 	// v := method.Vertex{3, 4}

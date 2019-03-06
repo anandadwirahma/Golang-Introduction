@@ -56,6 +56,61 @@ func main() {
 	fmt.Println("- Constant Numeric Constant :")
 	fmt.Println(basic.ConsNeedInt(basic.Small))
 
+	fmt.Println("- For loop basic :")
+	basic.Forloop()
+
+	fmt.Println("- For continued :")
+	basic.Forcontinued()
+
+	fmt.Println("- If Statement :")
+	fmt.Println(basic.Ifstatement(2))
+
+	fmt.Println("- If Short Statement :")
+	fmt.Println(basic.Ifshortstatement(3, 2, 10))
+
+	fmt.Println("- If else Statement :")
+	fmt.Println(basic.Ifelsestatement(3, 3, 20))
+
+	fmt.Println("- Switch Case Statement :")
+	basic.SwitchCase()
+
+	fmt.Println("- Switch with no condition :")
+	basic.SwitchWithNoCondition()
+
+	fmt.Println("- Defer function :")
+	basic.Defer()
+
+	fmt.Println("- Pointer Type :")
+	basic.Pointer()
+	var number = 4
+	fmt.Println("- Change Pointer :")
+	basic.PointerParam(&number, 10)
+	fmt.Println(number)
+
+	fmt.Println("- Structs Type :")
+	fmt.Println(basic.Vertex{1, 2})
+
+	fmt.Println("- Structs Fields :")
+	v := basic.Vertex{1, 2}
+	v.X = 4
+	fmt.Println(v)
+
+	// fmt.Println("- Pointer To Structs :")
+	// fmt.Println(basic.PointertoStructs())
+
+	fmt.Println("- Struct Literal :")
+	type Vertext struct {
+		X, Y int
+	}
+
+	var (
+		v1 = Vertext{1, 2}
+		v2 = Vertext{X: 1}
+		v3 = Vertext{}
+		p  = &Vertext{1, 2}
+	)
+	fmt.Println(v1, p, v2, v3, (*p).X)
+
 	// fmt.Println("- Method with pointer receiver : ")
 	// v := method.Vertex{3, 4}
 	// v.Scale(10)

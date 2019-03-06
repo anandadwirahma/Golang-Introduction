@@ -21,6 +21,6 @@ func ConsNeedFLoat(x float64) float64 {
 }
 
 //** NOTES **\\
-// - "Contant", are declaraed like variables.
+// - "Contant", are declared like variables.
 // - constant can be character,string,boolean,or numeric
 // - constant cannot be delcared using := syntax

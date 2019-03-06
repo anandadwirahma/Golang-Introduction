@@ -19,10 +19,10 @@ func FuncNameReturnValue(sum int) (x, y int) {
 }
 
 //** NOTES **\\
-// - "Funtion" can take zero or more aarguments.
+// - "Function" can take zero or more arguments.
 //         -> Type in argument is type of input value arguments
 //         -> Type in out parenthesis is type of value output funtion
 
-// - "Funtion Continued" possible for writing type of argument just once if we need same data type in argument
+// - "Function Continued" possible for writing type of argument just once if we need same data type in argument
 // - You can omit the type from all but the last, like :
 //        -> x, y int
